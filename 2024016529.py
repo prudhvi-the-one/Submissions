@@ -14,7 +14,7 @@ class LRUCache:
             return -1
 
     def put(self, key: int, value: int) -> None:
-        if len(self.dict1)<self.capacity:
+        if len(self.dict1)<=self.capacity:
             self.dict1[key] = value
         else:
             del self.dict1[key]
@@ -25,4 +25,4 @@ new = LRUCache(2)
 print(new.get(1))
 new.put(1,3)
 print(new.get(1))
-print(new.get())
+print(new.get(2))
